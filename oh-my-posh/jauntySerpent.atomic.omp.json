@@ -20,14 +20,14 @@
           "foreground": "#ffffff",
           "background": "#0077c2",
 		  "leading_diamond": "\u256d\u2500\ue0b6",
-          "template": "{{ if not .Root }} \uf120 {{ .Name }} {{ end }}"
+          "template": "{{ if not .Root }} \uf120 {{ .Name }} (v{{.Version}}){{ end }}"
         },
         {
           "type": "shell",
           "style": "diamond",
           "foreground": "#ffffff",
           "background": "#0077c2",
-          "template": "<parentBackground>\ue0b0</>{{ if .Root }} \uf120 {{ .Name }} {{ end }}"
+          "template": "<parentBackground>\ue0b0</>{{ if .Root }} \uf120 {{ .Name }} (v{{.Version}}){{ end }}"
         },
 		{
 		  "type": "session",
