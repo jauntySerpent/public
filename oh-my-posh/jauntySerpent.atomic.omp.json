@@ -6,29 +6,36 @@
       "type": "prompt",
       "alignment": "left",
       "segments": [
+		{
+          "type": "root",
+          "style": "diamond",
+          "foreground": "#FFFB38",
+          "background": "#ef5350",
+		  "leading_diamond": "\u256d\u2500\ue0b6",
+          "template": " (ELEVATED) "
+        },
+		{
+          "type": "shell",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#0077c2",
+		  "leading_diamond": "\u256d\u2500\ue0b6",
+          "template": "{{ if not .Root }} \uf120 {{ .Name }} {{ end }}"
+        },
         {
           "type": "shell",
           "style": "diamond",
           "foreground": "#ffffff",
           "background": "#0077c2",
-          "leading_diamond": "\u256d\u2500\ue0b6",
-          "template": "\uf120 {{ .Name }} "
+          "template": "<parentBackground>\ue0b0</>{{ if .Root }} \uf120 {{ .Name }} {{ end }}"
         },
 		{
 		  "type": "session",
 		  "style": "diamond",
 		  "foreground": "#ffffff",
 		  "background": "#c386f1",
-		  "leading_diamond": "",
-		  "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
+		  "template": "<parentBackground>\ue0b0</> {{ if .SSHSession }} {{ end }}{{ .UserName }} "
 		},
-        {
-          "type": "root",
-          "style": "diamond",
-          "foreground": "#FFFB38",
-          "background": "#ef5350",
-          "template": "<parentBackground>\ue0b0</> \uf292 "
-        },
         {
           "type": "path",
           "style": "powerline",
@@ -246,8 +253,14 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#21c7c7",
-          "template": "\u2570\u2500"
+          "foreground": "#0077c2",
+          "template": "{{ if not .Root }}\u2570\u2500{{ end }}"
+        },
+		{
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ef5350",
+          "template": "{{ if .Root }}\u2570\u2500{{ end }}"
         },
         {
           "type": "status",
