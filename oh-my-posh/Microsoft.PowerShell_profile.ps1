@@ -7,4 +7,4 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
 
 # Oh-My-Posh config
-oh-my-posh init pwsh --config "https://raw.githubusercontent.com/jauntySerpent/public/main/oh-my-posh/jauntySerpent.atomic.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "https://raw.githubusercontent.com/jauntySerpent/public/main/oh-my-posh/jauntySerpent.spaceship.omp.json" | Invoke-Expression
