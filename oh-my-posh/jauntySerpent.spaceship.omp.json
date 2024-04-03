@@ -47,7 +47,7 @@
 		  "foreground": "#ffffff",
 		  "template": "\uf253 {{ .FormattedMs }}",
 		  "properties": {
-		    "style": "roundrock",
+		    "style": "amarillo",
 			"threshold": 0
 		  }
 		}
